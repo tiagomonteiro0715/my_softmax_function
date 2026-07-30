@@ -22,7 +22,7 @@ def get_backend() -> str:
 
 def _find_ops_name() -> str:
     kernel_name = "my_softmax_function"
-    unique_id = "490d9fe_dirty"
+    unique_id = "fcfe221"
     backend = get_backend()
     return f"_{kernel_name}_{backend}_{unique_id}"
 

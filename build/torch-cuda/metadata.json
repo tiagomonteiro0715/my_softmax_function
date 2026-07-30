@@ -1,6 +1,6 @@
 {
   "name": "my-softmax-function",
-  "id": "_my_softmax_function_cuda_490d9fe_dirty",
+  "id": "_my_softmax_function_cuda_fcfe221",
   "version": 1,
   "license": "Apache-2.0",
   "python-depends": [
@@ -14,7 +14,7 @@
     "files": {
       "__init__.py": "ZpvyIhcU8bz4Xcc1WhVskt3WR3Yx9CCzS8+Jl1DOXGU=",
       "_kernel.py": "xDfkK2UVoOoZY8Jn4VtzTxrzdo6MfXVm72qu2S+/jp8=",
-      "_ops.py": "ZkMq9OCa4I7SzsNvw++4/jnPxnmILtflnvy5frJ1Pgc=",
+      "_ops.py": "+BooQQqCZcZeGIZWX0BK46u7inrgI9qFVaXUc7PghNo=",
       "attention_v3.py": "xWyf2XnBmPKuOe5D6h8/3S3QwQXpbYFZTYCRh49Fkso="
     }
   },
@@ -25,8 +25,8 @@
       "dirty": false
     },
     "kernel": {
-      "sha": "490d9fe259aa1f38cdfd8c9646791796518182ee",
-      "dirty": true
+      "sha": "fcfe22179222984d0d3dbd61ef961828fe404292",
+      "dirty": false
     }
   }
 }

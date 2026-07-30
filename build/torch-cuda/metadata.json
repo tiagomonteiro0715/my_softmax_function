@@ -1,0 +1,5 @@
+{
+  "python-depends": [
+    "nvidia-cutlass-dsl"
+  ]
+}

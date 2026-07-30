@@ -1,14 +1,11 @@
+# Hugging Face kernel-builder manifest.
+# Pure-Python kernel: written in the CUTLASS Python DSL and JIT-compiled on the
+# GPU at runtime, so there are NO compiled C++/CUDA sources to build.
+# CUTLASS targets NVIDIA only, so the sole backend is cuda.
 [general]
 name = "my_softmax_function"
-backends = [
-    "cpu",
-    "cuda",
-    "metal",
-    "rocm",
-    "xpu",
-]
+backends = ["cuda"]
+python-depends = ["nvidia-cutlass-dsl"]
 
 [torch]
 src = []
-
-[kernel]

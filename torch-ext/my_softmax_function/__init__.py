@@ -3,6 +3,6 @@
 Public API exposed to `kernels` consumers.
 """
 
-from ._ops import attention, softmax_attention
+from ._kernel import attention, softmax_attention
 
 __all__ = ["attention", "softmax_attention"]

@@ -10,6 +10,9 @@ backends = ["cuda"]
 # nested [general.cuda] table, NOT the top-level python-depends (which only
 # resolves "general" deps like einops).
 [general.cuda]
+# nvidia-cutlass-dsl 4.3.0 requires CUDA >= 12.8; this drops the older-CUDA
+# build variants where the wheel is marked broken.
+minver = "12.8"
 python-depends = ["nvidia-cutlass-dsl"]
 
 [torch]

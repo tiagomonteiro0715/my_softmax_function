@@ -5,6 +5,11 @@
 [general]
 name = "my_softmax_function"
 backends = ["cuda"]
+
+# nvidia-cutlass-dsl is a CUDA-backend-specific python dep, so it goes in the
+# nested [general.cuda] table, NOT the top-level python-depends (which only
+# resolves "general" deps like einops).
+[general.cuda]
 python-depends = ["nvidia-cutlass-dsl"]
 
 [torch]

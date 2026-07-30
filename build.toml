@@ -1,17 +1,8 @@
-# Hugging Face kernel-builder manifest.
-# Pure-Python kernel: written in the CUTLASS Python DSL and JIT-compiled on the
-# GPU at runtime, so there are NO compiled C++/CUDA sources to build.
-# CUTLASS targets NVIDIA only, so the sole backend is cuda.
 [general]
 name = "my_softmax_function"
 backends = ["cuda"]
 
-# nvidia-cutlass-dsl is a CUDA-backend-specific python dep, so it goes in the
-# nested [general.cuda] table, NOT the top-level python-depends (which only
-# resolves "general" deps like einops).
 [general.cuda]
-# nvidia-cutlass-dsl 4.3.0 requires CUDA >= 12.8; this drops the older-CUDA
-# build variants where the wheel is marked broken.
 minver = "12.8"
 python-depends = ["nvidia-cutlass-dsl"]
 

@@ -10,12 +10,11 @@ import math
 import torch
 from cutlass.cute.runtime import from_dlpack
 
+from ._ops import add_op_namespace_prefix
 from .attention_v3 import solve
 
-_OP_NAME = "my_softmax_function::softmax_attention"
 
-
-@torch.library.custom_op(_OP_NAME, mutates_args=())
+@torch.library.custom_op(add_op_namespace_prefix("softmax_attention"), mutates_args=())
 def softmax_attention(
     Q: torch.Tensor,        # (M, d)
     K: torch.Tensor,        # (N, d)
@@ -65,4 +64,5 @@ def attention(Q, K, V, scale=None):
     """Convenience entry point with a default 1/sqrt(d) scale."""
     if scale is None:
         scale = 1.0 / math.sqrt(Q.shape[-1])
-    return torch.ops.my_softmax_function.softmax_attention(Q, K, V, scale)
+    # Call the registered op directly (its namespace is build-unique).
+    return softmax_attention(Q, K, V, scale)

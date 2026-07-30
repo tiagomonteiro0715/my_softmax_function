@@ -1,10 +1,16 @@
+# Hugging Face kernel manifest (new huggingface/kernels schema).
+# Pure-Python kernel (CUTLASS Python DSL, JIT-compiled on the GPU at runtime):
+# no compiled sources -> declared with [torch-noarch]. CUDA-only (CUTLASS is NVIDIA).
 [general]
-name = "my_softmax_function"
+name = "my-softmax-function"
+version = 1
+edition = 5
+license = "Apache-2.0"
 backends = ["cuda"]
 
 [general.cuda]
+# nvidia-cutlass-dsl 4.3.0 requires CUDA >= 12.8.
 minver = "12.8"
 python-depends = ["nvidia-cutlass-dsl"]
 
-[torch]
-src = []
+[torch-noarch]

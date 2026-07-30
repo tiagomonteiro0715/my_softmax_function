@@ -1,5 +1,32 @@
 {
+  "name": "my-softmax-function",
+  "id": "_my_softmax_function_cuda_490d9fe_dirty",
+  "version": 1,
+  "license": "Apache-2.0",
   "python-depends": [
     "nvidia-cutlass-dsl"
-  ]
+  ],
+  "backend": {
+    "type": "cuda"
+  },
+  "digest": {
+    "algorithm": "sha256",
+    "files": {
+      "__init__.py": "ZpvyIhcU8bz4Xcc1WhVskt3WR3Yx9CCzS8+Jl1DOXGU=",
+      "_kernel.py": "xDfkK2UVoOoZY8Jn4VtzTxrzdo6MfXVm72qu2S+/jp8=",
+      "_ops.py": "ZkMq9OCa4I7SzsNvw++4/jnPxnmILtflnvy5frJ1Pgc=",
+      "attention_v3.py": "xWyf2XnBmPKuOe5D6h8/3S3QwQXpbYFZTYCRh49Fkso="
+    }
+  },
+  "provenance": {
+    "kernel-builder": {
+      "version": "0.17.0-dev0",
+      "sha": "d0610aa58db33b142c86b59598a2a1c730f52996",
+      "dirty": false
+    },
+    "kernel": {
+      "sha": "490d9fe259aa1f38cdfd8c9646791796518182ee",
+      "dirty": true
+    }
+  }
 }

@@ -1,0 +1,16 @@
+[project]
+name = "my-softmax-function"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "nvidia-cutlass-dsl>=4.6.1",
+    "torch>=2.13.0",
+]
+
+[dependency-groups]
+dev = [
+    "kernels",
+    "pytest",
+]

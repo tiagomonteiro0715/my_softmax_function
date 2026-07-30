@@ -1,0 +1,14 @@
+[general]
+name = "my_softmax_function"
+backends = [
+    "cpu",
+    "cuda",
+    "metal",
+    "rocm",
+    "xpu",
+]
+
+[torch]
+src = []
+
+[kernel]
